@@ -1,8 +1,8 @@
-package com.coderscampus.assignment_3;
+package com.coderscampus.assignment_3; 
 
 public class User {
 	
-	private String username; 
+	private static String username; 
 	private String password; 
 	private String name; 
 	
@@ -22,12 +22,15 @@ public class User {
 		this.password = password;
 	}
 
-	public String getname( ) {
+	public String getName( ) {
 		return name;
 	}
 	
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
+
 	
 }
