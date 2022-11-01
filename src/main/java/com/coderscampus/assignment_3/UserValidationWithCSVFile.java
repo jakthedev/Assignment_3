@@ -49,7 +49,9 @@ public class UserValidationWithCSVFile {
 						|| users[2].getUsername() != userName) 
 				{
 						System.out.println("Invalid login, please try again");
+						System.out.println("Enter your email:");
 						userName = scan.nextLine();
+						System.out.println("Enter password:");
 						passwordLogin = scan.nextLine();
 						t++;
 				} if (users[0].getUsername().equals(userName) || users[1].getUsername().equals(userName)
