@@ -2,7 +2,7 @@ package com.coderscampus.assignment_3;
 
 public class User {
 	
-	private static String username; 
+	private String username; 
 	private String password; 
 	private String name; 
 	
@@ -28,9 +28,5 @@ public class User {
 	
 	public void setName(String name) {
 		this.name = name;
-	}
-
-
-
-	
+	}	
 }
