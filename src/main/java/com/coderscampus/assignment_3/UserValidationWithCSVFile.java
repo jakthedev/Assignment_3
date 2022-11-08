@@ -43,9 +43,14 @@ public class UserValidationWithCSVFile {
 				if (users[0].getUsername().equals(userName) || users[1].getUsername().equals(userName)
 						|| users[2].getUsername().equals(userName))
 				{
-					System.out.println("Welcome " + userName);
+					for (int d = 0; d < users.length; d++) {
+						if (users[d].getUsername().equals(userName)) {
+							String name1 = users[d].getName();
+					System.out.println("Welcome " + name1);
 					break;
-				}  if (users[0].getUsername() != userName || users[1].getUsername() != userName
+						}
+				}break;
+				}if (users[0].getUsername() != userName || users[1].getUsername() != userName
 						|| users[2].getUsername() != userName) 
 				{
 						System.out.println("Invalid login, please try again");
@@ -57,8 +62,13 @@ public class UserValidationWithCSVFile {
 				} if (users[0].getUsername().equals(userName) || users[1].getUsername().equals(userName)
 						|| users[2].getUsername().equals(userName))
 				{
-					System.out.println("Welcome " + userName);
+					for (int j = 0; j < users.length; j++) {
+						if (users[j].getUsername().equals(userName)) {
+							String name = users[j].getName();
+					System.out.println("Welcome " + name);
 					break;
+						}
+					} break;
 				}
 				if (t == 4) 
 				{
