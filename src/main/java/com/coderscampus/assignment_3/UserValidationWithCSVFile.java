@@ -18,9 +18,10 @@ public class UserValidationWithCSVFile {
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your email:");
-		String userName = scan.nextLine();
+		String userName = scan.nextLine(); 
+		userName = userName.toLowerCase();
 		System.out.println("Enter password:");
-		String passwordLogin = scan.nextLine();
+		String passwordLogin = scan.nextLine(); 
 		int t = 0;
 
 		try {
@@ -40,8 +41,8 @@ public class UserValidationWithCSVFile {
 			
 			
 			while (t < 6) {
-				if (users[0].getUsername().equals(userName) || users[1].getUsername().equals(userName)
-						|| users[2].getUsername().equals(userName))
+				if (users[0].getUsername().equals(userName) && users[0].getPassword().equals(passwordLogin) || users[1].getUsername().equals(userName) && users[1].getPassword().equals(passwordLogin)
+						|| users[2].getUsername().equals(userName) && users[2].getPassword().equals(passwordLogin))
 				{
 					for (int d = 0; d < users.length; d++) {
 						if (users[d].getUsername().equals(userName)) {
@@ -50,17 +51,19 @@ public class UserValidationWithCSVFile {
 					break;
 						}
 				}break;
-				}if (users[0].getUsername() != userName || users[1].getUsername() != userName
-						|| users[2].getUsername() != userName) 
+				}if (!users[0].getUsername().equals(userName) && !users[0].getPassword().equals(passwordLogin) || !users[1].getUsername().equals(userName) && !users[1].getPassword().equals(passwordLogin)
+						|| !users[2].getUsername().equals(userName) && !users[2].getPassword().equals(passwordLogin)) 
 				{
 						System.out.println("Invalid login, please try again");
 						System.out.println("Enter your email:");
-						userName = scan.nextLine();
+						userName = scan.nextLine(); 
+						userName = userName.toLowerCase();
 						System.out.println("Enter password:");
-						passwordLogin = scan.nextLine();
+						passwordLogin = scan.nextLine(); 
 						t++;
-				} if (users[0].getUsername().equals(userName) || users[1].getUsername().equals(userName)
-						|| users[2].getUsername().equals(userName))
+						
+				} if (users[0].getUsername().equals(userName) && users[0].getPassword().equals(passwordLogin) || users[1].getUsername().equals(userName) && users[1].getPassword().equals(passwordLogin)
+						|| users[2].getUsername().equals(userName) && users[2].getPassword().equals(passwordLogin))
 				{
 					for (int j = 0; j < users.length; j++) {
 						if (users[j].getUsername().equals(userName)) {
